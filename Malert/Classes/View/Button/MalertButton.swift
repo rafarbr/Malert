@@ -99,6 +99,15 @@ extension MalertButton {
         self.backgroundColor = malertButtonConfiguration.backgroundColor
         self.separetorColor = malertButtonConfiguration.separetorColor
         self.tintColor = malertButtonConfiguration.tintColor
+        if malertButtonConfiguration.borderColor != .clear {
+            self.layer.borderColor = malertButtonConfiguration.borderColor.cgColor
+            self.layer.borderWidth = 1
+        }
+        self.titleLabel?.font = malertButtonConfiguration.font
+        
+        for (attribute, state) in malertButtonConfiguration.attributedTitle {
+            self.setAttributedTitle(attribute, for: state)
+        }
     }
     
     private func setUpViews() {

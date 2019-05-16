@@ -104,5 +104,8 @@ public struct MalertButtonConfiguration {
     public var backgroundColor: UIColor = .clear
     public var tintColor: UIColor = .lightText
     public var separetorColor: UIColor = UIColor(white: 0.8, alpha: 1)
+    public var borderColor: UIColor = .clear
+    public var font: UIFont = UIFont.systemFont(ofSize: 17)
+    public var attributedTitle: [NSAttributedString: UIControlState] = [:]
     public init() {}
 }
