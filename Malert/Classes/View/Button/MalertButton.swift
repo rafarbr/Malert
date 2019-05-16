@@ -38,7 +38,7 @@ public class MalertButton: UIButton {
     //MARK: Appearance 
     
     // Button Height
-    @objc public dynamic var height: CGFloat {
+    @objc public dynamic var buttonHeight: CGFloat {
         get { return bounds.size.height }
         set {
             self.heightAnchor.constraint(equalToConstant: newValue).isActive = true
