@@ -5,7 +5,6 @@
 //  Created by Vitor Mesquita on 31/10/16.
 //
 //
-
 import UIKit
 
 public class MalertView: UIView {
@@ -17,7 +16,7 @@ public class MalertView: UIView {
     private var customViewConstraints: [NSLayoutConstraint] = []
     private var stackConstraints: [NSLayoutConstraint] = []
     
-    private var viewsConfigurated = false
+//    private var viewsConfigurated = false
     
     private var hasButtons: Bool {
         if let buttons = buttons {
@@ -80,15 +79,15 @@ public class MalertView: UIView {
                                              hasMargin: buttonsSpace > 0,
                                              isHorizontalAxis: buttonsAxis == .horizontal)
         
-        DispatchQueue.main.async { [weak self] in
-            guard let strongSelf = self else { return }
+//        DispatchQueue.main.async { [weak self] in
+//            guard let strongSelf = self else { return }
+        
+            self.setUpTitle()
+            self.setUpCustomView()
+            self.setUpButtonsStackView()
             
-            strongSelf.setUpTitle()
-            strongSelf.setUpCustomView()
-            strongSelf.setUpButtonsStackView()
-            
-            strongSelf.viewsConfigurated = true
-        }
+//            strongSelf.viewsConfigurated = true
+//        }
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -231,7 +230,6 @@ extension MalertView {
 }
 
 // MARK: - Appearance
-
 extension MalertView {
     
     // Dialog view corner radius
